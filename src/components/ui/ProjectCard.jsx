@@ -58,7 +58,7 @@ function BrowserPreview({ project }) {
             <img
               className={`preview-image${imageLoaded ? '' : ' is-loading'}`}
               src={imageSource === 'local' ? project.image : `https://image.thum.io/get/width/1200/crop/900/${project.liveUrl}`}
-              alt={`Website preview of ${project.title}`}
+              alt={project.imageAlt || `Website preview of ${project.title}`}
               loading="lazy"
               onLoad={() => setImageLoaded(true)}
               onError={() => {
@@ -92,13 +92,23 @@ export function ProjectCard({ project }) {
       <div className="project-content">
         <span className="role-badge">{project.role}</span>
         <h3>{project.title}</h3>
+        {project.tagline && <p className="project-tagline">{project.tagline}</p>}
         <p className="project-description">{project.description}</p>
-        <div className="project-tech" aria-label="Technologies used">
-          {project.tech.map((tech) => <TechTag key={tech} label={tech} />)}
-        </div>
+        {project.highlights && (
+          <ul className="project-highlights" aria-label={`${project.title} highlights`}>
+            {project.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+          </ul>
+        )}
+        {project.projectNote && <p className="project-note">{project.projectNote}</p>}
+        {project.tech.length > 0 && (
+          <div className="project-tech" aria-label="Technologies used">
+            {project.tech.map((tech) => <TechTag key={tech} label={tech} />)}
+          </div>
+        )}
         <div className="project-actions">
-          {project.liveUrl && <a className="btn btn-primary btn-small" href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live Demo <ExternalIcon /></a>}
+          {project.liveUrl && <a className="btn btn-primary btn-small" href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.title} live website in a new tab`}>Live Demo <ExternalIcon /></a>}
           {project.githubUrl && <a className="btn btn-secondary btn-small" href={project.githubUrl} target="_blank" rel="noopener noreferrer"><GitHubIcon /> GitHub</a>}
+          {project.sourceCodePrivate && <span className="project-private-source">Source code private</span>}
         </div>
       </div>
     </article>

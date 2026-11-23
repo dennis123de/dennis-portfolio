@@ -213,10 +213,15 @@ img, svg { display: block; }
 .project-content { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 22px; }
 .role-badge { display: inline-flex; padding: 5px 9px; border: 1px solid color-mix(in srgb, var(--color-accent) 25%, var(--color-border)); border-radius: 999px; color: var(--color-accent); background: var(--color-accent-light); font-size: 9px; font-weight: 700; letter-spacing: .045em; text-transform: uppercase; }
 .project-content h3 { margin: 15px 0 7px; color: var(--color-text-primary); font-size: 20px; font-weight: 700; letter-spacing: -.035em; line-height: 1.25; }
+.project-tagline { margin: 0 0 8px; color: var(--color-text-primary); font-size: 12px; font-weight: 600; line-height: 1.6; }
 .project-description { display: -webkit-box; min-height: 60px; overflow: hidden; margin: 0; color: var(--color-text-secondary); font-size: 12px; line-height: 1.7; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.project-highlights { display: grid; gap: 5px; margin: 14px 0 0; padding: 0 0 0 17px; color: var(--color-text-secondary); font-size: 11px; line-height: 1.6; }
+.project-highlights li::marker { color: var(--color-accent); }
+.project-note { margin: 12px 0 0; color: var(--color-text-secondary); font-size: 11px; line-height: 1.6; }
 .project-tech { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 22px; }
 .project-tech .tech-tag { font-size: 9px; }
 .project-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.project-private-source { align-self: center; color: var(--color-text-secondary); font-size: 11px; }
 
 /* Skills */
 .section-skills { background: var(--color-surface); }

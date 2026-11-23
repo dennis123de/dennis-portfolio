@@ -38,4 +38,52 @@ export const projects = [
     githubUrl: 'https://github.com/dennis123de/fhast-pay',
     image: '/projects/fhast-pay.webp',
   },
+  {
+    slug: 'naira-shield',
+    title: 'NairaShield',
+    role: 'App, interface & accessibility · Team of two',
+    tagline: 'A voice-first tool helping blind and low-vision customers verify POS debits.',
+    description:
+      'Say your expected amount. NairaShield reads the bank alert aloud and warns by speech and vibration if the debit is higher, so you can challenge the agent on the spot.',
+    tech: ['React', 'TypeScript', 'Vite', 'Web Speech API', 'Vitest'],
+    highlights: [
+      'Voice-first flow with a typed fallback',
+      'Rules-based parsing for multiple Nigerian bank alert formats',
+      'Screen reader support, large print, and high contrast',
+      'Private dispute log stays on the device',
+    ],
+    projectNote:
+      'Working hackathon prototype; alert capture is simulated. Built for the AI for the Visually Impaired Hackathon (Accessible Financial Services track).',
+    liveUrl: 'https://naira-shield.vercel.app/',
+    githubUrl: null,
+    image: '/projects/naira-shield.webp',
+    imageAlt: 'Placeholder preview for NairaShield, a voice-first POS debit checking app',
+  },
+  {
+    slug: 'faim-arts',
+    title: 'Faim Arts',
+    role: 'Frontend and design · Built with a partner',
+    tagline: 'Portfolio website for Nigerian graphite and charcoal artist Iyanuoluwapo Akoteyon.',
+    description:
+      'Showcases her portraiture and storytelling artwork, with gallery, about, and contact sections.',
+    tech: ['React', 'Tailwind CSS', 'EmailJS'],
+    liveUrl: 'https://www.faimarts.com/',
+    githubUrl: null,
+    sourceCodePrivate: true,
+    image: '/projects/faim-arts.webp',
+    imageAlt: 'Placeholder preview for Faim Arts, a graphite and charcoal artist portfolio',
+  },
+  {
+    slug: 'study-mind',
+    title: 'Study Mind',
+    role: 'Backend development · Built with a friend',
+    description:
+      'A study tool that helps students break tasks down for maximum productivity.',
+    tech: [],
+    liveUrl: 'https://studymind-project.vercel.app/',
+    githubUrl: null,
+    sourceCodePrivate: true,
+    image: '/projects/study-mind.webp',
+    imageAlt: 'Placeholder preview for Study Mind, a student productivity tool',
+  },
 ]
